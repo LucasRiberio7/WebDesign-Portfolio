@@ -1,0 +1,140 @@
+*{
+  box-sizing: border-box;
+  margin:  0;
+  padding: 0;
+}
+body{
+    min-height: 100vh;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+/* === VIDEO DE FUNDO! === */
+
+/* O VIDEO FICA FIXO, ATRÁS DE TUDO COBRINDO A TELA INTEIRA */
+
+.bg-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+/* Camada Textura por cima do vidro para o texto ficar legivel*/
+.bg-overlay{
+    position: fixed;
+    top: 0;
+     left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.144);
+    z-index: -1;
+}
+
+/* ====Cabeçalho====*/
+header{
+    text-align: center;
+    color:aliceblue;
+    margin-bottom: 40px;   
+}
+header h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(9, 95, 37, 0.6);
+}
+
+header p{
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+/* ==cards==*/
+
+.container-cards{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    width: 280px;
+    height: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* =essa transição faz a imagem crescer suavemente */
+    transition: transform 0.5s ease;
+
+}
+/* ao passar o mouse a imagem dá um leve zoom*/
+.card:hover img{
+    transform: scale(1.15);
+}
+/* o conteúdo fica escondido embaixo, fora da visão*/
+.card-conteudo{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    background: linear-gradient(to top, rgba(0,0,0,0.9),transparent);
+    /*começa deslocado para baixo invisivel*/
+    transform: translateY(60%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+/*ao passar o mouse no card o conteúdo sobe e aparece*/
+.card:hover .card-conteudo{
+    transform: translateY(0);
+    opacity: 1;
+
+}
+.card-conteudo h3{
+    font-size: 1.rem;
+    margin-bottom: 8px;
+}
+.card-conteudo p{
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    opacity: 0.9;
+}
+.btn{
+   display: inline-block; 
+   padding: 8px 18px;
+   background: #ff5c5c;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 30px;
+   font-size: 0.85rem;
+   font-weight: bold;
+   transition: background 0.3 ease;
+}
+.btn:hover{
+    background: #ff5c5c;
+}
+/* ===RESPONSIVO====*/
+@media(max-width: 60px){
+    .card{
+        width: 90%;
+        height: 320px;
+    }
+}
+footer{
+  background: #0f172a2a;
+  color: #cbd5e1;
+  text-align:end;
+  padding: 2rem;
+}
