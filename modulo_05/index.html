@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Laboratório Interativo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <h1>Laboratório Interativo</h1>
+      <p>Quatro pequenas demonstrações de como o JavaScript altera uma página depois que ela já carregou: trocando texto, cor, estilo e conteúdo em resposta a cliques.</p>
+    </header>
+
+    <!-- DEMO 1: troca de conteúdo de texto -->
+    <section class="demo">
+      <div class="demo-head">
+        <h2>Frase do dia</h2>
+        <span>textContent</span>
+      </div>
+      <div class="stage">
+        <p id="frase">Clique no botão para trocar esta frase.</p>
+        <div class="btn-row">
+          <button id="btn-frase">Nova frase</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO 2: alteração de cor / estilo via classe -->
+    <section class="demo">
+      <div class="demo-head">
+        <h2>Cartão com tema</h2>
+        <span>classList</span>
+      </div>
+      <div class="stage">
+        <div id="cartao">
+          <h3>Modo Sálvia</h3>
+          <p>O botão abaixo alterna a cor de fundo e o texto deste cartão.</p>
+        </div>
+        <div class="btn-row">
+          <button id="btn-tema">Trocar tema</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO 3: contador com incremento/decremento -->
+    <section class="demo">
+      <div class="demo-head">
+        <h2>Contador</h2>
+        <span>estado + eventos</span>
+      </div>
+      <div class="stage">
+        <div class="contador-display">
+          <span id="numero">0</span>
+        </div>
+        <div class="btn-row">
+          <button id="btn-menos" class="secondary">− 1</button>
+          <button id="btn-mais">+ 1</button>
+          <button id="btn-zerar" class="secondary">Zerar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO 4: destaque de palavras em um parágrafo -->
+    <section class="demo">
+      <div class="demo-head">
+        <h2>Destacar palavras-chave</h2>
+        <span>innerHTML</span>
+      </div>
+      <div class="stage">
+        <p id="paragrafo-destaque">O JavaScript permite manipular elementos da página, criar interações com botões e alterar conteúdos por meio de eventos como o clique.</p>
+        <div class="btn-row">
+          <button id="btn-destacar">Destacar termos</button>
+          <button id="btn-limpar" class="secondary">Remover destaque</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>Página construída para praticar manipulação de DOM e eventos.</footer>
+  </div>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
