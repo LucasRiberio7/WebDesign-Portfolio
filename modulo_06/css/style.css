@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 0 auto 1rem auto;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+button {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+#lista-tarefas {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
+
+#lista-tarefas li {
+  background-color: #f1f5f9;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+}
+
+#contador {
+  font-weight: bold;
+  color: #3b82f6;
+}
